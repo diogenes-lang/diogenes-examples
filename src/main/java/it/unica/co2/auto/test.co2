@@ -1,0 +1,21 @@
+package it.unica.co2.auto
+
+/*
+ * eq C = ( "a" ? unit . "a" ! unit . 0 
+    + "b" ? unit . "b" ! unit . 0 ) .
+  eq P = (("x") tell "x" C . (
+    do "x" "a" ? unit . do "x" "a" ! unit . 0 +
+    do "x" "b" ? unit . do "x" "b" ! unit . 0 )
+  ) .
+*/
+
+honesty P
+
+contract C {
+	a? . b!
+}
+
+specification P {
+	tell x C .
+		receive@x a? . send@x b!
+}

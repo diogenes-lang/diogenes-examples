@@ -1,0 +1,15 @@
+
+.classpath
+.project
+.settings
+.launch
+.gradle
+
+bin
+target
+build
+xtend-gen
+src-gen
+
+**local.properties
+
